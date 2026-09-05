@@ -1,0 +1,26 @@
+project:
+  type: book
+
+book:
+  title: "Toán"
+  # author: "Norah Jones"
+  date: "8/19/2026"
+  chapters:
+    - index.md
+    - logic.md
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    documentclass: scrreprt
+
+
+

@@ -1,0 +1,17 @@
+{
+  "index.md": {
+    "index.html": "61cb3769"
+  },
+  "intro.qmd": {
+    "intro.html": "f7a0fcec"
+  },
+  "summary.qmd": {
+    "summary.html": "a4896461"
+  },
+  "references.qmd": {
+    "references.html": "b3540a10"
+  },
+  "logic.md": {
+    "logic.html": "e5581848"
+  }
+}
