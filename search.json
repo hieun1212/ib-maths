@@ -1,0 +1,82 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Toán",
+    "section": "",
+    "text": "Preface",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "logic.html",
+    "href": "logic.html",
+    "title": "1  Logic",
+    "section": "",
+    "text": "1.1 Mệnh đề tương đương\nMệnh đề là một phát biểu có thể đúng hoặc sai, nhưng không thể vừa đúng vừa sai.\nDạng mệnh đề (propositional form) là các mệnh đề phức được tạo thành bằng cách kết hợp các biến mệnh đề thông qua toán tử logic. Ví dụ: \\[\n  (P \\wedge ({\\sim} Q)) \\vee (({\\sim} P) \\wedge Q)\n\\]\nHai dạng mệnh đề \\(A\\) và \\(B\\) được gọi là tương đương về mặt logic nếu bảng giá trị logic của chúng giống nhau ở mọi dòng. Khi đó, ta ký hiệu \\(A \\equiv B\\). Ngược lại, nếu \\(A\\) và \\(B\\) không tương đương, ta ký hiệu \\(A \\not\\equiv B\\).\nĐịnh lý về mệnh đề tương đương: Với các mệnh đề \\(P, Q\\) và \\(R\\) bất kỳ, ta luôn có",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Logic</span>"
+    ]
+  },
+  {
+    "objectID": "logic.html#mệnh-đề-tương-đương",
+    "href": "logic.html#mệnh-đề-tương-đương",
+    "title": "1  Logic",
+    "section": "",
+    "text": "Giao hoán: \\[\n  \\begin{aligned}\nP \\wedge Q &\\equiv Q \\wedge P\\\\\nP \\vee Q &\\equiv Q \\vee P \\\\\nP \\oplus Q &\\equiv Q \\oplus P.\n  \\end{aligned}\n\\]\nKết hợp: \\[\n\\begin{aligned}\nP \\wedge (Q \\wedge R) &\\equiv (P \\wedge Q) \\wedge R \\\\\nP \\vee (Q \\vee R) &\\equiv (P \\vee Q) \\vee R\\\\\nP \\oplus (Q \\oplus R) &\\equiv (P \\oplus Q) \\oplus R.\n\\end{aligned}\n\\]\nPhân phối: \\[\n\\begin{aligned}\nP \\wedge (Q \\vee R) &\\equiv (P \\wedge Q) \\vee (P \\wedge R) \\\\\nP \\vee (Q \\wedge R) &\\equiv (P \\vee Q) \\wedge (P \\vee R) \\\\\nP \\wedge (Q \\oplus R) &\\equiv (P \\wedge Q) \\oplus (P \\wedge R)\n\\end{aligned}\n\\]\nLuỹ đẳng: \\(P \\wedge P \\equiv P\\), và \\(P \\vee P \\equiv P\\).\nHấp thụ: \\(P \\wedge (P \\vee Q) \\equiv P\\), và \\(P \\vee (P \\wedge Q) \\equiv P\\).\nPhủ định: \\[\n\\begin{aligned}\n{\\sim} ({\\sim} P) &\\equiv P \\\\\n{\\sim} (P \\wedge Q) &\\equiv ({\\sim} P) \\vee ({\\sim} Q) \\\\\n{\\sim} (P \\vee Q) &\\equiv ({\\sim} P) \\wedge ({\\sim} Q).\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Logic</span>"
+    ]
+  },
+  {
+    "objectID": "logic.html#mệnh-đề-kéo-theo",
+    "href": "logic.html#mệnh-đề-kéo-theo",
+    "title": "1  Logic",
+    "section": "1.2 Mệnh đề kéo theo",
+    "text": "1.2 Mệnh đề kéo theo\nMệnh đề có dạng “Nếu \\(P\\) thì \\(Q\\)” được gọi là một mệnh đề kéo theo. Trong đó, \\(P\\) được gọi là giả thiết và \\(Q\\) là kết luận.\nVới hai mệnh đề \\(P, Q\\) bất kỳ, bảng giá trị logic của \\(P \\Rightarrow Q\\) được xác định như sau:\n\n\n\n\\(P\\)\n\\(Q\\)\n\\(P \\Rightarrow Q\\)\n\n\n\n\nT\nT\nT\n\n\nT\nF\nF\n\n\nF\nT\nT\n\n\nF\nF\nT\n\n\n\nChú ý rằng \\(P \\Rightarrow Q\\) chỉ sai trong trường hợp giả thiết \\(P\\) đúng và kết luận \\(Q\\) sai.\nĐịnh lý. Cho \\(P\\) và \\(Q\\) là hai mệnh đề phân biệt, khi đó:\n\n\\(P \\Rightarrow Q \\quad  \\not \\equiv \\quad Q \\Rightarrow P\\).\n\\(P \\Rightarrow Q \\quad \\equiv \\quad  ({\\sim} Q) \\Rightarrow ({\\sim} P)\\).\n\\(P \\Rightarrow Q \\quad \\equiv \\quad ({\\sim} P) \\vee Q\\).\n\\({\\sim} (P \\Rightarrow Q) \\equiv P \\wedge ({\\sim} Q)\\).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Logic</span>"
+    ]
+  },
+  {
+    "objectID": "logic.html#bài-tập",
+    "href": "logic.html#bài-tập",
+    "title": "1  Logic",
+    "section": "Bài tập",
+    "text": "Bài tập\nBài 1. Lập bảng giá trị logic của mỗi dạng mệnh đề sau\na) \\((P \\vee \\overline{Q}) \\Rightarrow P\\)\nb) \\(P \\Rightarrow (Q \\wedge \\overline{P} )\\)\nc) \\((P \\oplus Q) \\Rightarrow (P \\vee Q)\\)\nBài 2. Lập bảng giá trị logic của mỗi dạng mệnh đề sau\na) \\((P \\Rightarrow Q) \\wedge (Q\\Rightarrow R)\\)\nb) \\((P \\Rightarrow Q) \\Rightarrow (Q \\vee R)\\)\nc) \\(({\\sim} (P \\oplus Q)) \\Rightarrow ({\\sim} (R \\wedge P))\\)\nBài 3. Chứng minh luật phủ định \\({\\sim} ({\\sim} P) \\equiv P\\) và \\({\\sim} (P \\wedge Q) \\equiv ({\\sim}P) \\vee ({\\sim} Q)\\) bằng bảng giá trị logic.\nBài 4. Chứng minh tính chất kết hợp đối với \\(\\wedge\\) và \\(\\vee\\).\nBài 5. Chứng minh tính chứng phân phối trong định lý về mệnh đề tương đương.\nBài 6. Khẳng định sau đúng hay sai? Tại sao? \\[\n  ({\\sim}P)\\oplus (Q \\oplus P) \\equiv ({\\sim}Q)\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Logic</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "2  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "3  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]
