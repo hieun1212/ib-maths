@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-08-19">
 
-<title>Toán</title>
+<title>2&nbsp; Tập hợp – Toán</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./logic.html" rel="next">
+<link href="./logic.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -71,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -83,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sets.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tập hợp</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -110,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -122,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sets.html" class="sidebar-item-text sidebar-link">
+  <a href="./sets.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tập hợp</span></span></a>
   </div>
 </li>
@@ -136,7 +164,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#các-khái-niệm-cơ-bản" id="toc-các-khái-niệm-cơ-bản" class="nav-link active" data-scroll-target="#các-khái-niệm-cơ-bản"><span class="header-section-number">2.1</span> Các khái niệm cơ bản</a></li>
+  <li><a href="#phép-toán-trên-tập-hợp" id="toc-phép-toán-trên-tập-hợp" class="nav-link" data-scroll-target="#phép-toán-trên-tập-hợp"><span class="header-section-number">2.2</span> Phép toán trên tập hợp</a></li>
   </ul>
 </nav>
     </div>
@@ -145,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Toán</h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tập hợp</span></h1>
 </div>
 
 
@@ -153,12 +182,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">August 19, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -168,8 +191,39 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
+<section id="các-khái-niệm-cơ-bản" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="các-khái-niệm-cơ-bản"><span class="header-section-number">2.1</span> Các khái niệm cơ bản</h2>
+<p>Tập hợp được ký hiệu bằng các ký tự in hoa như A, B,… , và phần tử của tập hợp được ký hiệu bằng các ký tự thường như a, b,…. Tập hợp với các phần tử a, b, c,… được ký hiệu là <span class="math inline">\(\{ a, b, c, \dots \}\)</span>.</p>
+<p>Nếu một phần tử <span class="math inline">\(a\)</span> thuộc tập hợp <span class="math inline">\(A\)</span>, ta ký hiệu là <span class="math inline">\(a \in A\)</span>, ngược lại, nếu <span class="math inline">\(a\)</span> không thuộc tập hợp <span class="math inline">\(A\)</span> thì ký hiệu là <span class="math inline">\(a \notin A\)</span>.</p>
+<p>Nếu mọi phần tử của tập hợp <span class="math inline">\(A\)</span> đều thuộc tập hợp <span class="math inline">\(B\)</span>, ta nói <span class="math inline">\(A\)</span> là một tập con của <span class="math inline">\(B\)</span> và viết là <span class="math inline">\(A \subset B\)</span> hoặc <span class="math inline">\(B \supset A\)</span> (đọc là “<span class="math inline">\(A\)</span> chứa trong <span class="math inline">\(B\)</span>” hoặc “B chứa A”). Hai tập hợp <span class="math inline">\(A\)</span> và <span class="math inline">\(B\)</span> được gọi là bằng nhau, ký hiệu là <span class="math inline">\(A = B\)</span>, nếu mọi phần tử của <span class="math inline">\(A\)</span> đều thuộc <span class="math inline">\(B\)</span> và ngược lại. Nếu <span class="math inline">\(A \subset B\)</span> nhưng <span class="math inline">\(A \neq B\)</span>, chúng ta nói rằng <span class="math inline">\(A\)</span> là <em>tập con thực sự</em> của <span class="math inline">\(B\)</span>.</p>
+<p><strong>Tập rỗng</strong>, ký hiệu là <span class="math inline">\(\varnothing\)</span>, là tập hợp không chứa bất kỳ phần tử nào. <em>Quy ước</em>: Tập rỗng là tập con của mọi tập hợp.</p>
+</section>
+<section id="phép-toán-trên-tập-hợp" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="phép-toán-trên-tập-hợp"><span class="header-section-number">2.2</span> Phép toán trên tập hợp</h2>
+<p>Cho hai tập hợp <span class="math inline">\(A\)</span> và <span class="math inline">\(B\)</span> bất ký. Tổng hoặc hợp của <span class="math inline">\(A\)</span> và <span class="math inline">\(B\)</span>, ký hiệu là <span class="math inline">\(A \cup B\)</span>, là tập hợp chứa tất cả các phần tử thuộc <span class="math inline">\(A\)</span> hoặc <span class="math inline">\(B\)</span> (Hình 1).</p>
+<p>Giao của <span class="math inline">\(A\)</span> và <span class="math inline">\(B\)</span>, ký hiệu là <span class="math inline">\(A \cap B\)</span>, là tập hợp gồm các phần tử chung của <span class="math inline">\(A\)</span> và <span class="math inline">\(B\)</span> (Hình 2).</p>
+<p><img src="images/union-intersection.png" class="img-fluid"></p>
+<p>Từ định nghĩa trên, ta rút ra tính chất giao hoán và kết hợp đối với phép toán <span class="math inline">\(\cap\)</span> và <span class="math inline">\(\cup\)</span> như sau <span class="math display">\[
+\begin{aligned}
+  A \cap B = B \cap A, \qquad (A \cap B) \cap C = A \cap (B \cap C), \\
+  A \cup B = B \cup A, \qquad (A \cup B) \cup C = A \cup (B \cup C).
+\end{aligned}
+\]</span></p>
+<p>Tính chất phân phối <span class="math display">\[
+  \begin{aligned}
+    (A \cup B) \cap C = (A \cap C) \cup (B \cap C), \\
+    (A \cap B) \cup C = (A \cup C) \cap (B \cup C).
+  \end{aligned}
+\]</span></p>
+<p>Hiệu <span class="math inline">\(A - B\)</span> của hai tập hợp <span class="math inline">\(A\)</span> và <span class="math inline">\(B\)</span> (theo đúng thứ tự) là tập hợp các phần tử thuộc <span class="math inline">\(A\)</span> nhưng không thuộc <span class="math inline">\(B\)</span> (Hình 3). Hiệu đối xứng của <span class="math inline">\(A\)</span> và <span class="math inline">\(B\)</span>, ký hiệu là <span class="math inline">\(A \triangle B\)</span>, là hợp của hai tập hiệu <span class="math inline">\(A - B\)</span> và <span class="math inline">\(B - A\)</span> (Hình 4): <span class="math display">\[
+  A \triangle B = (A - B) \cup (B - A)
+\]</span></p>
+<p>Cho tập hợp <span class="math inline">\(R\)</span> và <span class="math inline">\(A\)</span> là một tập con của <span class="math inline">\(R\)</span>, khi đó hiệu <span class="math inline">\(R - A\)</span> được gọi là phần bù của A, ký hiệu là <span class="math inline">\(CA\)</span>. Ta có một nguyên lý quan trọng sau, gọi là <strong>nguyên lý đối ngẫu</strong> (duality principle): <span class="math display">\[
+\begin{aligned}
+  R - \bigcap_{i} A_i = \bigcup_{i} (R - A_i), \\
+  R - \bigcup_{i} A_i = \bigcap_{i} (R - A_i).  
+\end{aligned}
+\]</span></p>
 
 
 </section>
@@ -577,11 +631,11 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./logic.html" class="pagination-link" aria-label="Logic">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Logic</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./logic.html" class="pagination-link" aria-label="Logic">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Logic</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
